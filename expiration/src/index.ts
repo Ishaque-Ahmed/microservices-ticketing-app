@@ -2,6 +2,7 @@ import { natsWrapper } from './NatsWrapper';
 import { OrderCreatedListener } from './events/listeners/orderCreatedListener';
 
 const start = async () => {
+  console.log('Starting...');
   if (!process.env.NATS_CLIENT_ID) {
     throw new Error('NATS_CLIENT_ID not found!');
   }
